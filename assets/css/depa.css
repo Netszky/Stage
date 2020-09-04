@@ -1,0 +1,44 @@
+body {
+    min-height: 1080px;
+}
+.title {
+    background: linear-gradient(#292929, #000000);
+    margin-top: 43px;
+    text-align: center;
+}
+.text__title{
+    color: #3399ff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+.container2 {
+    margin-top: 40px;
+    display: flex;
+    height: auto;
+    justify-content: center;
+}
+.text {
+    transition: ease-in 1s;
+}
+.one {
+    text-align: center;
+    width: 50%;
+    height: auto;
+    border-right: 2px solid #3399ff;
+}
+.two{
+    text-align: center;
+    width: 50%;
+}
+.text {
+    margin-left: 10px;
+    text-align: start !important;
+    color: white;
+    font-size: 20px;
+}

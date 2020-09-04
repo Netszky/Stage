@@ -1,0 +1,18 @@
+body {
+    background-color: #292929;
+    height: auto;
+}
+.img {
+    height: auto;
+    width: 1000px;
+    background-image: url("img/CV.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}

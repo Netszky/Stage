@@ -1,0 +1,49 @@
+body {
+    min-height: 1080px;
+}
+.title {
+    margin-top: 43px;
+    background: linear-gradient(#292929, #000000);
+    text-align: center;
+}
+.text__title{
+    color: #3399ff;
+    font-weight: bold;
+}
+.container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.one {
+    text-align: center;
+    width: 50%;
+    height: auto;
+    border-right: 2px solid #3399ff;
+}
+.two{
+    text-align: center;
+    width: 50%;
+    height: 500px;
+}
+.text {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: start !important;
+    color: white;
+    font-size: 20px;
+}
+.pic {
+    text-align: center;
+    border-top: 2px solid #3399ff
+}
+.pic h1 {
+    border-bottom: 2px solid #3399ff;
+    margin: 0;
+}
+.desc {
+    text-align: center;
+    border-top: 2px solid #3399ff;  
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

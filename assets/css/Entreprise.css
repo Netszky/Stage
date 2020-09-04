@@ -1,0 +1,30 @@
+body {
+    min-height: 1080px;
+}
+.container {
+    margin-top: 50px;
+    height: auto;
+    width: 100%;
+    display: block;
+}
+.img {
+   display: flex;
+   justify-content: center;
+}
+.box__container {
+    text-align: center;
+    height: 100%;
+    margin: 0px 20% 0 20%;
+    border-left: 2px solid #3399ff;
+    border-right: 2px solid #3399ff;
+}
+.text__title {
+    font-weight: bold;
+    color: #3399ff; 
+    border-bottom: solid 2px #3399ff;
+    margin: 0 80px 0 80px;
+}
+.text {
+    color: white;
+    font-size: 20px;
+}

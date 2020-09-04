@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets\css\base.css">
+    <link rel="stylesheet" href="assets\css\depa.css">
+    <title>SharePoint</title>
+</head>
+<header>
+    <div class="navbar__1">
+        <ul class="box">
+            <li class="navbar__content">
+                <a href="">Chigot Julien</a>
+              </li>
+            <li class="navbar__content" >
+                <a href="index.html"> Accueil </a>
+            </li>
+            <li class="navbar__content" >
+                <a href="About.html"> CV </a>
+            </li>
+            <li class="navbar__content">
+                <a href="Projet.html">Projets</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<body>
+    <div class="title">
+        <h1 class="text__title">Mise en place de SharePoint</h1>
+        <img src="assets/css/img/Share.png" height="200px" width="400px">
+    </div>
+    <div class="container">
+        <div class="one">
+            <h1 class="text__title">Description</h1>
+            <p class="text"> Dans le cadre de mon stage de 2e Année j'ai effectué une mission de dépannage et de mise en place d'une solution de partage de fichier. <br>
+                Lors d'une visite dans un cabinet de comptable, client de l'entreprise, ce dernier nous a émi le souhait de vouloir mettre en place une solution de partage de fichier en ligne, local et simplifiée.<br>
+                Le cabinet compte de nombreux collaborateur qui travaillent la plupart sur les mêmes dossiers avec le besoin que ces derniers soient maintenus à jour.<br>
+                Il nous incombait donc de proposer une solution adaptée aux besoins de l'entreprise à moindre coût.
+                <br> <br>Au cours de cette mission je n'ai malheureusement pas eu l'occasion de prendre de capture d'écran, aussi je me permet de m'excuser pour ce récit très descriptif..
+            </p>
+            <h1 class="text__title">Solution</h1>
+            <p class="text">
+                Après réflexion notre choix s'est donc tourné vers SharePoint, une solution de partage de fichier développée par Microsoft à l'instar de OneDrive.
+                Pourquoi SharePoint et non OneDrive ?<br>
+                SharePoint permet un accès via le Web ou en local via le mapping du partage sur un disque, de plus ce dernier permet une gestion des accès et de la sécurité type Active Directory.
+                L'administrateur peut donc limiter les accès (Lecture, modification, écriture) des différents fichier et avoir un historique de leur modification.<br>
+                SharePoint bénéficie en plus d'autres outils de collaboration, d'échanges à l'instar de Slack, comme la constitution d'équipes, création de projet et répartition des tâches que ne propose pas OneDrive.
+            </p>
+            <h1 class="text__title">Mise en Place</h1>
+            <p class="text">Avant toute chose il convient de s'assurer que tout les collaborateurs ont accès à leur compte Microsoft ce dernier étant requis pour les ajouters au SharePoint comme on le ferait en local via un controleur de domaine par exemple.<br>
+            Nous avons donc tenu à jour un fichier Excel comprenant toutes les informations de connexions des collaborateurs exclusif à l'administrateur.
+            </p>
+            <p class="text"> Nous avons donc ensuite crée le SharePoint via le compte de l'administrateur, et ajouté les collaborateurs via leur compte Microsoft(Office).<br>
+            Après s'être assuré que tout les collaborateurs étaient bien présent, nous avons modifié les accès de sorte à ce que l'administrateur dispose du control total sur les documents et les collaborateurs, Lecture et écriture. <br><br>
+            Nous créons ensuite l'arborescence, les différents dossiers et sous-dossiers nécessaire à l'organisation. 
+            Enfin pour pouvoir accéder au SharePoint par l'explorateur windows et stocker le contenu sur un disque, nous mappons l'url du Sharepoint. Nous avons rencontré beaucoup de difficultés sur ce point, techniquement windows dispose de variables d'environnement stockant les informations de compte Microsoft et les réutilises quand il en a besoin.<br>
+            Lors du mappage Windows nécessite les accès Office de l'utilisateur en variable d'environnement pour pouvoir se connecter au Sharepoint or ce système ne marche pas sur les postes équipés de Windows 10 et malgré notre demande au support microsoft nous n'avons pas réussi à mapper le Sharepoint pour les postes équipés de Windows 10 qui sera donc accessibles seulement via le navigateur Web.<br>
+            <br> Enfin nous avons sensibilisé les collaborateurs aux différentes fonctionnalités de SharePoint afin qu'ils puissent exploiter pleinement le potentiel de manière autonome, tout en restant à leur disposition.
+        </p><br>
+        </div>
+        <div class="two">
+            <h1 class="text__title">Compétences</h1>
+            <ul>
+                <li class="text">
+                    Développement de solution répondant à des critères
+                </li>
+                <li class="text">
+                    Windows / Microsoft SharePoint
+                </li>
+                <li class="text">
+                    Dépannage Windows
+                </li>
+                <li class="text">Gestion Mot de Passe</li>
+                <li class="text">Administration </li>
+            </ul>
+            <h1 class="text__title"> Objectif</h1>
+            <ul>
+                <li class="text">
+                    Mise en place d'une solution partage de fichier la plus adaptée possible
+                </li>
+                <li class="text">
+                    Résolution des différents problèmes rencontrés (Windows / Internet / Stockage)
+                </li>
+            </ul>
+            <h1 class="text__title">Parc Informatique</h1>
+            <ul>
+                <li class="text">
+                    1 Windows Server 2012
+                </li>
+                <li class="text">
+                    1 Windows 10
+                </li>
+                <li class="text">
+                    4 Windows 7
+                </li>
+                <li class="text">
+                    1 Windows 8
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="one">
+            
+        </div>
+        <div class="two">
+
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="container__footer">
+      <h1>Réseaux</h1>
+      <div class="logo">
+        <a href="https://github.com/Netszky" target="_blank"><img src="assets/icons/github.png" width="120px" height="50px"></a>
+        <a href="https://www.linkedin.com/in/julien-chigot-ynov/" target="_blank"><img src="assets/icons/linkedin.png" width="50px" height="50px"></a>
+      </div>
+    </div>
+  </footer>
+</html>

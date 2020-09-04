@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets\css\base.css">
+    <link rel="stylesheet" href="assets\css\Scanner.css">
+    <title>Creation Scanner</title>
+</head>
+<header>
+    <div class="navbar__1">
+        <ul class="box">
+            <li class="navbar__content">
+                <a href="">Chigot Julien</a>
+              </li>
+            <li class="navbar__content" >
+                <a href="index.html"> Accueil </a>
+            </li>
+            <li class="navbar__content" >
+                <a href="About.html"> CV </a>
+            </li>
+            <li class="navbar__content">
+                <a href="Projet.html">Projets</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<body>
+    <div class="title">
+        <h1 class="text__title">Développement Scanner Chronopost</h1>
+        <img src="assets/css/img/Honeywell.png" height="200px" width="400px">
+    </div>
+    <div class="container">
+        <div class="one">
+            <h1 class="text__title">Description</h1>
+            <p class="text"> Mon maitre de stage m'a confié la mission de réaliser un lecteur de Code Barre pour Chronopost. Un SDK développé par la société HoneyWell m'a donc été fourni pour que je réalise cette tâche.<br>
+                Le but étant de développé avec ce SDK un programme (C) qui sera inséré dans un lecteur de code-barre afin de lire des codes répondant aux critères ChronoPost ci-dessous.
+            </p>
+            <ul>
+                <p class="text"> Voici les critères Chronopost</p>>
+                <li class="text">
+                    Code Longueur 39, contenant 13 caractères Alphanumériques(A-Z / 0-9)<br>
+                    Exemple : QSDFGHJKLM123<br>
+                </li><br>
+                <li class="text">
+                    Code Longueur 128, contenant 28 caractères Alphanumériques et commençant par "%"<br>
+                    Exemple : %CODE128WITH28CHARACTERSGOOD<br>
+                </li><br>
+                <li class="text">
+                    Code Longueur 128, contenant 25 caractères, les 11 premiers étant Alphanumériques, 12 et 13 Alpha et de 14 à 25 numériques seulement. <br> 
+                    Exemple : ABC123EFG45AA123456789321<br>
+                </li>
+            </ul>
+            <p class="text">
+                Le but du programme inséré dans le scanner est donc de vérifier ces différents critères lorsque l'on scanne un code.
+            </p>
+        </div>
+        <div class="two">
+            <h1 class="text__title">Compétences</h1>
+            <ul>
+                <li class="text">
+                    Langage C
+                </li>
+                <br>
+                <li class="text">
+                    Utilisation et compréhension d'un SDK
+                </li>
+                <br>
+                <li class="text">
+                    Commande Linux
+                </li>
+            </ul>
+            <h1 class="text__title">Ressources Nécessaires</h1>
+            <ul>
+                <li class="text">
+                    Lecteur de Code Barre Honeywell
+                </li>
+                <br>
+                <li class="text">
+                    SDK Honeywell
+                </li>
+                <br>
+                <li class="text">
+                    Editeur de Code (Langage C)
+                </li>
+                <br>
+                <li class="text">
+                    Logiciel Cygwin (Environnement Linux)
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pic">
+        <h1 class="text__title">1. Utilisation SDK</h1>
+        <img src="assets/css/img/screen.png" height="100%" width="80%">
+    </div>
+    <div class="desc">
+        <p class="text">
+            L'utilisation du SDK nécessite l'installation du logiciel "Cygwin", qui crée un environnement virtuel Linux nécessaire pour la décompression du SDK et son utilisation notamment pour la compilation du fichier C en .moc(à insérer dans le scanner).
+            Le SDK contient des exemples de fichiers commenté, ainsi que des instructions ainsi qu'un guide d'utilisation.<br>
+            <br>
+            L'image ci-dessus représente la creation et la compilation des fichiers nécessaires avec la commande "make" qui appelle un fichier nommé "MakeFile" créé par HoneyWell dans son SDK qui compile en prenant en compte les fichiers de configuration grace au logiciel "Cygwin".<br>
+            Nous utilisons donc Cygwin pour la décompression du SDK et l'utilisation de son contenu. La décompression du SDK nous fournit dans l'environnement virtuel linux tout les fichiers nécessaires, les instructions et fichiers tests.  Le plus important de toute les fichiers étant le fichier MakeFile qui permet la création du fichier ".moc" qui est l'élément principal du scanner.<br>
+            Il faut noter que les "sample", les codes d'exeple sont très complets et très bien commentés, permettant une compréhension très facile.
+        </p>
+    </div>
+    <div class="pic">
+        <h1 class="text__title">2. Developpement Programme </h1>
+        <img src="assets/css/img/code.png" height="100%" width="80%">
+    </div>
+    <div class="desc">
+        <a href="assets/css/img/SafestorFormat.c">Voir le code</a>
+        <p class="text">
+            Voici un exemple du code dans lequel on test chaque caractère d'un code de longueur 39. On identifie au préalable la longueur du code, pour ensuite déterminer quels sont les critères à vérifier.<br>
+            Ici on sait que le code est un code 39, on applique donc les critères relatifs à ce code (voir plus haut).<br><bR>
+            Explications du code : <br>
+            On sait que le code est un code de longueur 39, dont les critères sont que ce dernier contient 13 caractères seulement Alphanumériques.<br>
+            La premier condition est donc que le code soit un code 39 et qu'il contienne 13 caractères.<br>
+            On boucle donc sur le code pour en lire chaque caractère un par un et vérifier qu'il s'agit bien d'un caractère Alphanumérique. Si le caractère est conforme on passe au suivant, sinon la vérification s'arrête et le code renvoie une erreur car le code ne pourra pas être lu à partir du moment ou un seul caractère n'est pas conforme, donc pas besoin d'aller plus loin.<br>
+            En revanche si la vérification est conforme on retourne le code et son contenu et on pourra ensuite le rechercher dans la base de données pour trouver ce à quoi il correspond.<br><br>
+            Si l'on résume le code contient deux parties, une premiere partie définissant quel type de code et sa longueur, et une seconde vérifiant son contenu. A chaque fois le principe est le même.
+
+        </p>
+    </div>
+    <div class="pic">
+        <h1 class="text__title">
+           3. Utilisation du Scanner
+        </h1>
+        <img src="assets/css/img/screen2.png" height="100%" width="80%">
+    </div>
+    <div class="desc">
+        <p class="text">
+            Voici une présentation du Software livré avec le SDK par Honeywell qui permet l'utilisation du scanner. Ce dernier fonctionne via un Navigateur Web(Chrome essentiellement).<br>
+            L'utilisation nécessite un scanner de la marque Honeywell. Une fois le scanner connecté et reconnu par le logiciel on upload le fichier .moc (compilation du programme en C ci-dessous).<br>
+            Il faut ensuite renseigner les configurations que l'on souhaite, le port qu'utilise le scanner. Le logiciel dispose aussi d'un système de commande permettant l'activation de fonctionnalités du scanner comme le debug, l'idendification du matériel, la licence...
+            <br>Le scanner dispose de 2Mo de mémoire ce qui est relativement peu, c'est pourquoi le langage C est utilisé car il permet une gestion de la mémoire très pratique lorsque l'on travail sur de très petits volumes. Dans notre cas ici nous disposons de plus de mémoire qu'il n'en faut.
+        </p>
+    </div>
+    <div class="pic">
+        <img src="assets/css/img/screen3.png" height="100%" width="80%">
+    </div>
+    <div class="pic">
+        <img src="assets/css/img/screen4.png" height="100%" width="80%">
+    </div>
+    <div class="pic">
+        <img src="assets/css/img/exemple.png" height="100%" width="80%">
+    </div>
+    <div class="desc">
+        <p class="text">
+            Voici le Code barre utilisé pour la capture d'écran au dessus.
+        </p>
+    </div>
+    <div class="pic">
+        <img src="assets/css/img/screen5.png" height="100%" width="80%">
+    </div>
+    <div class="desc">
+        <p class="text">Ici le logiciel nous renvoie le code que nous venons de scanner car il est conforme aux règles ChronoPost et son type est reconnu par le scanner. <br>
+            Le mode Debug rencontrant quelques difficultés le scan d'un mauvais code ne renvoie tout simplement rien, comme si l'on ne scannait pas alors qu'il devrait renvoyer un message d'erreur comme le montre l'exemple de code ci-dessus.<br>
+            Cela n'est pas dérangeant, le but du scanner étant seulement de renvoyer les codes bons et d'ignorer les codes non conformes.<br>
+            Le lecteur de code-barre est donc fonctionnel et répond aux besoins de l'utilisateur à savoir lecture des codes Chronopost et ignore les autres codes. Il retourne bien les codes qui seront ensuite utilisés pour être recherché dans la base de donnée et de connaitre l'identité du colis.
+        </p>
+    </div>
+</body>
+<footer>
+    <div class="container__footer">
+      <h1>Réseaux</h1>
+      <div class="logo">
+        <a href="https://github.com/Netszky" target="_blank"><img src="assets/icons/github.png" width="120px" height="50px"></a>
+        <a href="https://www.linkedin.com/in/julien-chigot-ynov/" target="_blank"><img src="assets/icons/linkedin.png" width="50px" height="50px"></a>
+      </div>
+    </div>
+  </footer>
